@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apocalipse em Santo André</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>🧟 APOCALIPSE EM SANTO ANDRÉ 🧟</h1>
+            <p>Você conseguiria sobreviver ao fim do mundo?</p>
+        </header>
+
+        <div id="quiz">
+
+            <div class="topo">
+                <span id="contador">Pergunta 1 de 8</span>
+                <span id="pontuacao">Pontos: 0</span>
+            </div>
+
+            <h2 id="pergunta">
+                Pergunta aqui
+            </h2>
+
+            <div id="alternativas"></div>
+
+            <button id="proximo" onclick="proximaPergunta()" disabled>
+                PRÓXIMA PERGUNTA →
+            </button>
+
+        </div>
+
+        <div id="resultado" class="resultado escondido">
+            <h2>☠️ FIM DA SOBREVIVÊNCIA ☠️</h2>
+
+            <p id="resultadoTexto"></p>
+
+            <button onclick="reiniciarQuiz()">
+                JOGAR NOVAMENTE
+            </button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
