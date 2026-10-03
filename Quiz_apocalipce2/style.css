@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)),
+        url("https://images.unsplash.com/photo-1533130061792-64b345e4a833?auto=format&fit=crop&w=1920&q=80");
+
+    background-size: cover;
+    background-position: center;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 850px;
+
+    background: rgba(15, 15, 15, 0.95);
+
+    border: 2px solid #666;
+    border-radius: 15px;
+
+    padding: 35px;
+
+    box-shadow:
+        0 0 30px rgba(0, 0, 0, 0.9);
+
+    text-align: center;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 38px;
+    color: #d6d6d6;
+
+    text-shadow:
+        3px 3px 0 #222,
+        0 0 15px #777;
+}
+
+header p {
+    margin-top: 10px;
+    color: #aaa;
+    font-size: 18px;
+}
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+
+    color: #aaa;
+    font-size: 15px;
+}
+
+#pergunta {
+    font-size: 27px;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+#alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.alternativa {
+    width: 100%;
+
+    padding: 17px;
+
+    border: 2px solid #555;
+    border-radius: 10px;
+
+    background: #222;
+    color: white;
+
+    font-size: 17px;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.alternativa:hover {
+    background: #333;
+    border-color: #aaa;
+    transform: scale(1.01);
+}
+
+.alternativa.selecionada {
+    background: #444;
+    border-color: white;
+}
+
+.alternativa.correta {
+    background: #315c35;
+    border-color: #6dbb75;
+}
+
+.alternativa.errada {
+    background: #632f2f;
+    border-color: #c76666;
+}
+
+#proximo,
+.resultado button {
+    margin-top: 25px;
+
+    padding: 15px 30px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #555;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#proximo:hover,
+.resultado button:hover {
+    background: #777;
+}
+
+#proximo:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.resultado h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.resultado p {
+    font-size: 21px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+.escondido {
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    #pergunta {
+        font-size: 21px;
+    }
+
+}
